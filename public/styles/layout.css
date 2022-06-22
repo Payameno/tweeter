@@ -18,8 +18,100 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: 'Source Sans Pro', sans-serif;
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+article.tweet:hover {
+  box-shadow: 5px 5px #4057a17e;
+}
+.new-tweet{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 26px;
+}
+label {
+  color: #545149;
+  font-weight: bold;
+}
+textarea {
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
+.button {
+  border: none;
+  color: #f4f1ec;
+  font-family: 'Bungee', sans-serif;
+  font-size: 26px;
+  background-color: #4056A1;
+}
+.formBottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 3px solid #545149;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+}
+.counter {
+  font-family: 'Bungee', sans-serif;
+  color: #545149;
+}
+article {
+  width: 50%;
+  padding: 8px 16px 8px 16px;
+  margin: auto;
+  margin-bottom: 26px;
+  display: flex;
+  flex-direction: column;
+  border: solid 3px #545149;
+}
+article:hover {
+  box-shadow: #4056A1;
+  }
+.tweetHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.tweetUser {
+  display: flex;
+  flex-direction: row;
+}
+div.tweetUser p {
+  margin-left: 2px;
+}
+.tweetTag {
+  font-weight: bold;
+  color: #4057a15c;
+}
+.tweetFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 18px;
+  border-top: solid 3px #545149;
+}
+.tweetMessage {
+  font-size: 12px;
+}
+p.date {
+  font-weight: bold;
+  font-size: smaller;
+  margin-top: 8px;
+  margin-bottom:16px
+}
+footer.tweetFooter div {
+  margin-top: 8px;
+  margin-bottom:16px
+}
+footer.tweetFooter div i:hover {
+  color: #e76f51;
+}
