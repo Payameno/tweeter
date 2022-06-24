@@ -10,52 +10,54 @@ const escapeTo = function (str) {
 };
 
 $(document).ready(function () {
-  $(window).resize(function() {
+  $(window).resize(function () {
     if ($(window).width() <= 1240) {
-      $(document).scroll(function() {
-      if ($(document).scrollTop()) {
-        $("nav").css("background-color", "#4056A1")
-      } else {
-        $("nav").css("background-color", "rgba(0, 0, 0, 0)")
-      }})
-    } else if ($(window).width() > 1240) {
-      $(document).scroll(function() {
+      $(document).scroll(function () {
         if ($(document).scrollTop()) {
-          $("nav").css("background-color", "#4056A1")
+          $("nav").css("background-color", "#4056A1");
         } else {
-          $("nav").css("background-color", "#4056A1")
-        }})
+          $("nav").css("background-color", "rgba(0, 0, 0, 0)");
+        }
+      });
+    } else if ($(window).width() > 1240) {
+      $(document).scroll(function () {
+        if ($(document).scrollTop()) {
+          $("nav").css("background-color", "#4056A1");
+        } else {
+          $("nav").css("background-color", "#4056A1");
+        }
+      });
     }
-    $("nav").css("background-color", "#4056A1")
+    $("nav").css("background-color", "#4056A1");
   });
   $("#tweet-post").submit(function (event) {
     event.preventDefault();
     let tweetData = $("#tweet-text").serialize();
     const textInput = tweetData.slice(5);
     if (!textInput) {
-      $("form p").slideDown("slow", function() {
-      $("form p").html("No messages found to post!");
-      })
+      $("form p").slideDown("slow", function () {
+        $("form p").html("No messages found to post!");
+      });
     } else if (textInput.length > 140) {
-      $("form p").slideDown("slow", function() {
-      $("form p").html("Tweets cannot be more than 140 characters!");
-      })
+      $("form p").slideDown("slow", function () {
+        $("form p").html("Tweets cannot be more than 140 characters!");
+      });
     } else {
-    $.post( "/tweets", tweetData, () => {
-      $("#tweet-text").val("");
-      $("form p").hide();
-      loadTweets();
-      })
+      $.post("/tweets", tweetData, () => {
+        $("#tweet-text").val("");
+        $("form p").hide();
+        loadTweets();
+      });
     }
-    });
+  });
 
-  const loadTweets = function() {
-    $.get("/tweets", function(data) {
+  const loadTweets = function () {
+    $.get("/tweets", function (data) {
       renderTweets(data);
-    })
-  }
+    });
+  };
 
-  const renderTweets = function(tweets) {
+  const renderTweets = function (tweets) {
     let tweetElement;
     $("#tweets-container").empty();
     for (let tweet of tweets) {
@@ -84,7 +86,7 @@ $(document).ready(function () {
     </footer>
      </article>`;
     return $tweet;
-  }
+  };
   $("form p").hide();
   loadTweets();
 });
