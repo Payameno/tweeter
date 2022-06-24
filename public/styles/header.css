@@ -1,6 +1,5 @@
 .pageHeader {
   color: #545149;
-  position: relative;
   top: 120px;
   height: 400px;
   width: 100%;
@@ -13,3 +12,13 @@
   justify-content: center;
   align-items: center
  }
+
+ @media only screen and (min-width: 1240px) {
+  .pageHeader {
+    width: 25%;
+    float: left;
+    top: 0px;
+    margin-top: 240px;
+    margin-left: 120px;
+  }
+}
