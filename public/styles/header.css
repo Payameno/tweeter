@@ -1,0 +1,15 @@
+.pageHeader {
+  color: #545149;
+  position: relative;
+  top: 120px;
+  height: 400px;
+  width: 100%;
+  background-color: #e76f51;
+  background-image: url("https://www.transparenttextures.com/patterns/robots.png");
+ }
+ .userDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+ }

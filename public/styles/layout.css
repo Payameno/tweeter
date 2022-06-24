@@ -11,7 +11,7 @@ html {
 }
 
 /*
- * Global layout stuff
+ * Global layout stuff - Tablet VIEW
  */
 
 body {
@@ -19,6 +19,10 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
+}
+.mainBox {
+  position: relative;
+  top: 120px;
 }
 article.tweet:hover {
   box-shadow: 5px 5px #4057a17e;
@@ -32,7 +36,7 @@ form {
   width: 50%;
   display: flex;
   flex-direction: column;
-  margin-bottom: 26px;
+  margin-bottom: 46px;
 }
 label {
   color: #545149;
@@ -63,7 +67,7 @@ textarea {
   font-family: 'Bungee', sans-serif;
   color: #545149;
 }
-article {
+article.tweet {
   width: 50%;
   padding: 8px 16px 8px 16px;
   margin: auto;
@@ -88,7 +92,7 @@ article:hover {
 div.tweetUser p {
   margin-left: 2px;
 }
-.tweetTag {
+.tweetHandle {
   font-weight: bold;
   color: #4057a15c;
 }
@@ -101,6 +105,7 @@ div.tweetUser p {
 }
 .tweetMessage {
   font-size: 12px;
+  word-wrap: break-word;
 }
 p.date {
   font-weight: bold;
@@ -114,4 +119,32 @@ footer.tweetFooter div {
 }
 footer.tweetFooter div i:hover {
   color: #e76f51;
+}
+#tweet-post p {
+  display: flex;
+  width: 50%em;
+  margin-top: 4px;
+  padding: 2px 8px 2px 8px;
+  font-family: 'Source Sans Pro', sans-serif;
+  justify-content: center;
+  color: #545149;
+  font-weight: bold;
+  background-color: #e76f515f;
+  ;
+}
+.bodyFooter {
+  position: relative;
+  top: 120px;
+  height: 24px;
+  margin-top: 24px;
+  background-color: #4056A1;
+}
+
+@media only screen and (min-width: 1240px) {
+  body {
+    color: #545149;
+    background-color: #ef0000;
+    font-size: 24px;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
 }
