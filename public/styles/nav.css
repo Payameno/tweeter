@@ -25,7 +25,7 @@ nav {
   color: #4056A1;
  }
  #fa-color:hover {
-  color: #4057a1a3;
+  color: #8392c3cb;
  }
 
  @media only screen and (min-width: 680px) {
@@ -37,7 +37,13 @@ nav {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 30px;
    }
-}
+   #fa-color {
+    color: #4056A1;
+   }
+   #fa-color:hover {
+    color: #8392c3cb;
+  }
+ }
  @media only screen and (min-width: 1240px) {
   nav {
     background-color: #4056A1;
