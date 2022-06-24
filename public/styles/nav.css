@@ -1,5 +1,8 @@
 nav {
   position: fixed;
+  z-index: 1;
+  background-color: #e76f51;
+  background-image: url("https://www.transparenttextures.com/patterns/robots.png");
   display: flex;
   flex-direction: row;
   justify-content: space-between;

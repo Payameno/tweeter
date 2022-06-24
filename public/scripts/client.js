@@ -10,35 +10,35 @@ const escapeTo = function (str) {
 };
 
 $(document).ready(function () {
-  $(window).resize(function () {
-    if ($(window).width() <= 1240) {
-      $(document).scroll(function () {
-        if ($(document).scrollTop()) {
-          $("nav").css("background-color", "#4056A1");
-        } else {
-          $("nav").css("background-color", "rgba(0, 0, 0, 0)");
-        }
-      });
-    } else if ($(window).width() > 1240) {
-      $(document).scroll(function () {
-        if ($(document).scrollTop()) {
-          $("nav").css("background-color", "#4056A1");
-        } else {
-          $("nav").css("background-color", "#4056A1");
-        }
-      });
-    }
-    $("nav").css("background-color", "#4056A1");
-  });
-  $("#tweet-post").submit(function (event) {
+  // $(window).resize(function () {
+  //   if ($(window).width() <= 1240) {
+  //     $(document).scroll(function () {
+  //       if ($(document).scrollTop()) {
+  //         $("nav").css("background-color", "#4056A1");
+  //       } else {
+  //         $("nav").css("background-color", "rgba(0, 0, 0, 0)");
+  //       }
+  //     });
+  //   } else if ($(window).width() > 1240) {
+  //     $(document).scroll(function () {
+  //       if ($(document).scrollTop()) {
+  //         $("nav").css("background-color", "#4056A1");
+  //       } else {
+  //         $("nav").css("background-color", "#4056A1");
+  //       }
+  //     });
+  //   }
+  //   $("nav").css("background-color", "#4056A1");
+  // });
+  $("#tweet-post").on("submit", function (event) {
     event.preventDefault();
     let tweetData = $("#tweet-text").serialize();
-    const textInput = tweetData.slice(5);
-    if (!textInput) {
+    let tweetLength = $("#tweet-text").val().length;
+    if (tweetLength === 0) {
       $("form p").slideDown("slow", function () {
-        $("form p").html("No messages found to post!");
+      $("form p").html("No messages found to post!");
       });
-    } else if (textInput.length > 140) {
+    } else if (tweetLength > 140) {
       $("form p").slideDown("slow", function () {
         $("form p").html("Tweets cannot be more than 140 characters!");
       });
