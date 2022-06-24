@@ -8,7 +8,7 @@ nav {
   color: #FFFFFF;
   padding: 1.5em;
 }
-.navT {
+.navToggle {
   display: flex;
   flex-direction: column;
   align-items: center;
