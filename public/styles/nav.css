@@ -1,68 +1,249 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff - Tablet View
+ */
+body {
+  position: relative;
+  color: #545149;
+  background-color: #F4F1EC;
+  font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.mainBox {
+  padding-top: 56px;
+  position: relative;
+}
+
+article.tweet:hover {
+  box-shadow: 5px 5px rgba(64, 87, 161, 0.4941176471);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-bottom: 46px;
+}
+
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  color: #545149;
+  font-weight: bold;
+}
+
+textarea {
+  border: none;
+  background-color: transparent;
+  resize: none;
+  outline: none;
+}
+
+.button {
+  border: none;
+  color: #F4F1EC;
+  font-family: "Bungee", sans-serif;
+  font-size: 26px;
+  background-color: #4056A1;
+}
+
+.formBottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 3px solid #545149;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+}
+
+.counter {
+  font-family: "Bungee", sans-serif;
+  color: #545149;
+}
+
+article.tweet {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 8px 16px 8px 16px;
+  margin: auto;
+  margin-bottom: 26px;
+  border: solid 3px #545149;
+}
+
+article:hover {
+  box-shadow: #4056A1;
+}
+
+.tweetHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.tweetUser {
+  display: flex;
+  flex-direction: row;
+}
+
+div.tweetUser p {
+  margin-left: 2px;
+}
+
+.tweetHandle {
+  font-weight: bold;
+  color: rgba(64, 87, 161, 0.3607843137);
+}
+
+.tweetFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 18px;
+  border-top: solid 3px #545149;
+}
+
+.tweetMessage {
+  font-size: 12px;
+  word-wrap: break-word;
+}
+
+p.date {
+  font-weight: bold;
+  font-size: smaller;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+footer.tweetFooter div {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+footer.tweetFooter div i:hover {
+  color: #e76f51;
+}
+
+#tweet-post p {
+  display: flex;
+  width: 50% em;
+  margin-top: 4px;
+  padding: 2px 8px 2px 8px;
+  font-family: "Source Sans Pro", sans-serif;
+  justify-content: center;
+  color: #545149;
+  font-weight: bold;
+  background-color: rgba(231, 111, 81, 0.3725490196);
+}
+
+.bodyFooter {
+  position: relative;
+  top: 120px;
+  height: 24px;
+  margin-top: 24px;
+  background-color: #4056A1;
+}
+
+@media only screen and (min-width: 1240px) {
+  body {
+    color: #545149;
+    background-color: #F4F1EC;
+    font-size: 24px;
+    font-family: "Source Sans Pro", sans-serif;
+  }
+  .mainBox {
+    position: relative;
+    float: right;
+    top: 120px;
+    padding-top: 120px;
+    width: 65%;
+  }
+  form {
+    width: 80%;
+  }
+}
 nav {
+  display: flex;
+  flex-direction: row;
   position: fixed;
   z-index: 1;
   background-color: #e76f51;
   background-image: url("https://www.transparenttextures.com/patterns/robots.png");
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
   height: 120px;
   width: 100vw;
   color: #FFFFFF;
   padding: 1.5em;
 }
-.navToggle {
+nav .navToggle {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .logo {
   font-size: 26px;
-  font-family: 'Bungee', sans-serif;
- }
- .navTweet {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 22px;
- }
- #fa-color {
-  color: #4056A1;
- }
- #fa-color:hover {
-  color: #8392c3cb;
- }
+  font-family: "Bungee", sans-serif;
+}
 
- @media only screen and (min-width: 680px) {
+.navTweet {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 22px;
+}
+
+#fa-color {
+  color: #4056A1;
+}
+
+#fa-color:hover {
+  color: rgba(131, 146, 195, 0.7960784314);
+}
+
+@media only screen and (min-width: 680px) {
   .logo {
     font-size: 36px;
-    font-family: 'Bungee', sans-serif;
-   }
-   .navTweet {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 30px;
-   }
-   #fa-color {
-    color: #4056A1;
-   }
-   #fa-color:hover {
-    color: #8392c3cb;
+    font-family: "Bungee", sans-serif;
   }
- }
- @media only screen and (min-width: 1240px) {
+  .navTweet {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 30px;
+  }
+  #fa-color {
+    color: #4056A1;
+  }
+  #fa-color:hover {
+    color: rgba(131, 146, 195, 0.7960784314);
+  }
+}
+@media only screen and (min-width: 1240px) {
   nav {
     background-color: #4056A1;
   }
   .logo {
     font-size: 50px;
-    font-family: 'Bungee', sans-serif;
-   }
-   .navTweet {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Bungee", sans-serif;
+  }
+  .navTweet {
+    font-family: "Source Sans Pro", sans-serif;
     font-size: 36px;
-   }
-   #fa-color {
+  }
+  #fa-color {
     color: #e76f51;
-   }
-   #fa-color:hover {
+  }
+  #fa-color:hover {
     color: #eeab9a;
-   }
+  }
 }

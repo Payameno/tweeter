@@ -1,0 +1,30 @@
+@use 'layout';
+@mixin display($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+.pageHeader {
+  color: layout.$Fuscous-Grey;
+  top: 0px;
+  padding-top: 120px;
+  height: 400px;
+  width: 100%;
+  background-color: layout.$orang-color;
+  background-image: url("https://www.transparenttextures.com/patterns/robots.png");
+ }
+ .userDetails {
+  @include display($direction: column);
+  justify-content: center;
+  align-items: center
+ }
+
+ @media only screen and (min-width: 1240px) {
+  .pageHeader {
+    width: 25%;
+    float: left;
+    top: 0px;
+    margin-top: 240px;
+    margin-left: 120px;
+  }
+}

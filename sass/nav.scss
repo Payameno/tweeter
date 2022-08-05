@@ -1,0 +1,72 @@
+@use 'layout';
+@mixin display($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+nav {
+  @include display($direction: row);
+  position: fixed;
+  z-index: 1;
+  background-color: layout.$orang-color;
+  background-image: url("https://www.transparenttextures.com/patterns/robots.png");
+  justify-content: space-between;
+  height: 120px;
+  width: 100vw;
+  color: #FFFFFF;
+  padding: 1.5em;
+
+.navToggle {
+  @include display($direction: column);
+  align-items: center;
+}
+}
+.logo {
+  font-size: 26px;
+  font-family: 'Bungee', sans-serif;
+ }
+ .navTweet {
+  font-family: layout.$font-stack-source;
+  font-size: 22px;
+ }
+ #fa-color {
+  color: layout.$Dusky-Blue;
+ }
+ #fa-color:hover {
+  color: #8392c3cb;
+ }
+ @media only screen and (min-width: 680px) {
+  .logo {
+    font-size: 36px;
+    font-family: 'Bungee', sans-serif;
+   }
+   .navTweet {
+    font-family: layout.$font-stack-source;
+    font-size: 30px;
+   }
+   #fa-color {
+    color: layout.$Dusky-Blue;
+   }
+   #fa-color:hover {
+    color: #8392c3cb;
+  }
+ }
+ @media only screen and (min-width: 1240px) {
+  nav {
+    background-color: layout.$Dusky-Blue;
+  }
+  .logo {
+    font-size: 50px;
+    font-family: 'Bungee', sans-serif;
+   }
+   .navTweet {
+    font-family: layout.$font-stack-source;
+    font-size: 36px;
+   }
+   #fa-color {
+    color: layout.$orang-color;
+   }
+   #fa-color:hover {
+    color: #eeab9a;
+   }
+}
